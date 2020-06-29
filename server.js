@@ -1,0 +1,31 @@
+// Importação "Require" das dependencias
+const express = require('express');
+const nunjucks = require('nunjucks');
+const routes = require ("./routes");
+
+// criacao do servidor com express function
+const server = express();
+
+
+// declaracao da pasta de uses (css, js)
+server.use(express.urlencoded({extended: true}));
+server.use(express.static('public'));
+server.use(routes);
+
+// declaracao da view engine do nunjucks
+server.set("view engine", "njk");
+
+// configuração nunjucks
+nunjucks.configure("views", {
+    express: server,
+    noCache: true,
+    autoescape: false
+})
+
+
+// porta
+server.listen(5000, function(){
+    console.log("server is running");
+});
+
+

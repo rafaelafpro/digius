@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,700&display=swap');
+
+:root {
+    --primary-color: #0f121f;
+    --secondary-color: #00c28c;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+}
+
+
+
+header {
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+header .top-bar {
+    max-width: 70vw;
+    padding: 32px 5%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 150px;
+}
+
+
+header .links {
+    font-size: 16px;
+}
+
+header .links a+a {
+    margin-left: 32px;
+}
+
+header .links a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+header .links a.active{
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+header .links a:hover{
+    color: var(--secondary-color);
+}
+
+header .links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+header .links a:hover::after {
+    width: 100%;
+    transition: width 200ms cubic-bezier(1, 0.2, 0.65, 0.89);
+}
+
+
+
+/* ===== TEACHERS CARD ======= */
+
+.card {
+    width: 800px;
+    margin: 64px auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    box-shadow: 5px 6px rgba(0, 0, 0, 0.24);
+    animation: fadein 400ms ease;
+    delay: 1s;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+
+.card .info {
+    padding: 32px;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    letter-spacing: 0.8px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 8px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.card .item {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.37);
+}
+
+.card .item div:nth-child(1) {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+}
+
+.card .item div:nth-child(2) {
+    margin-top: 6px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card .item:nth-child(7) {
+    border: none;
+}
+
+.card .item span {
+    display: inline-block;
+    margin: 8px 0;
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    color: white;
+    font-weight: normal;
+    font-size: 12px;
+    border-radius: 16px;
+    text-transform: uppercase;
+}
+
+
+/* === form ==*/ 
+
+
+input {
+    width: 100%;
+    outline: none;
+    color: #555555;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+input[type="radio"]{
+    width: initial;
+    margin-right: 8px;
+    margin-top: 0;
+}
+
+
+select {
+    width: 100%;
+    margin-top: 16px;
+    outline: none;
+    color: #555555;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card input::placeholder {
+    color: rgba(68, 68, 68, 0.404);
+    font-weight: 300;
+}
+
+.card input[type="text"] {
+    width: 100%;
+}
+
+
+button {
+    margin-top: 16px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 16px;
+    padding: 8px 0;
+}

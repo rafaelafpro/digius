@@ -2,6 +2,8 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const routes = require ("./routes");
+const methodOverride = require("method-override");
+
 
 // criacao do servidor com express function
 const server = express();
@@ -10,6 +12,7 @@ const server = express();
 // declaracao da pasta de uses (css, js)
 server.use(express.urlencoded({extended: true}));
 server.use(express.static('public'));
+server.use(methodOverride('_method'))
 server.use(routes);
 
 // declaracao da view engine do nunjucks

@@ -104,6 +104,7 @@ header .links a:hover::after {
 
 .card .info {
     padding: 32px;
+    position: relative;
 }
 
 .card h3 {
@@ -134,6 +135,7 @@ header .links a:hover::after {
     margin-top: 6px;
     font-size: 18px;
     font-weight: bold;
+    color: rgba(0, 0, 0, 0.911);
 }
 
 .card .item:nth-child(7) {
@@ -191,13 +193,106 @@ select {
 }
 
 
-button {
+button, .info a {
     margin-top: 16px;
-    width: 100%;
+    width: 50%;
     font-size: 18px;
     font-weight: bold;
     background-color: var(--primary-color);
     color: white;
     border-radius: 16px;
     padding: 8px 0;
+    cursor: pointer;
+}
+
+ 
+.info a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+} 
+
+#delete-form button {
+    width: 45%;
+    background-color: darkred;
+    position: absolute;
+    bottom: 32px;
+    right: 16px;
+}
+
+
+/* ====== table ======*/
+
+.table-teachers {
+    display: block;
+    padding: 32px;
+}
+
+.table-teachers table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.table-teachers th {
+    text-align: left;
+    padding: 16px 0;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+
+
+.table-teachers td {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.384);
+    padding: 32px 0;
+}
+
+.table-teachers th:last-child, td:last-child {
+    text-align: center;
+}
+
+.table-teachers td:first-child {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+}
+
+.table-teachers tr td:first-child span {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.274);
+}
+
+.table-teachers tr:last-child td {
+    border: none;
+}
+
+.table-teachers span {
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.table-teachers a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 8px;
+    position: relative;
+    transition: 200ms ease-in-out;
+}
+
+.table-teachers a:hover {
+    background-color: #4c60b8;
+    transition: 200ms ease-in-out;
 }

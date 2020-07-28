@@ -1,0 +1,34 @@
+
+            <div class="item">
+                <div>URL do Avatar</div>
+                <input type="url" name="avatar_url" placeholder="https://" value="{{teacher.avatar_url}}">
+            </div>
+            <div class="item">
+                <div>Nome</div>
+                <input type="text" name="name" placeholder="Digite o seu nome completo" value="{{teacher.name}}">
+            </div>
+            <div class="item">
+                <div>Data de Nascimento</div>
+                <input type="date" name="birth_date" value="{{teacher.date}}">
+            </div>
+            <div class="item">
+                <div>Grau de Escolaridade</div>
+                <select name="education_level">
+                    <option value="" selected disabled>Selecione o seu grau de escolaridade</option>
+                    <option value="medio" {% if teacher.education_level == 'medio' %} selected {% endif %}>Ensino Médio Completo</option>
+                    <option value="superior" {% if teacher.education_level == 'superior' %} selected {% endif %}>Ensino Superior Completo</option>
+                    <option value="mestrado" {% if teacher.education_level == 'mestrado' %} selected {% endif %}>Mestrado</option>
+                    <option value="doutorado" {% if teacher.education_level == 'doutorado' %} selected {% endif %}>Doutorado</option>
+                </select>
+            </div>
+            <div class="item">
+                <div>Tipo de Aula</div>
+                <span><input type="radio" name="class_type" value="Presencial" {% if teacher.class_type == 'Presencial' %} checked {% endif %}>Presencial</span>
+                <span><input type="radio" name="class_type" value="À distância" {% if teacher.class_type == 'À distância' %} checked {% endif %}>À distância</span>
+            </div>
+            <div class="item">
+                <div>Área de Atuação</div>
+                <input type="text" name="subjects_taught" placeholder="Quais matérias você leciona? Separe por vírgulas" value='{{ teacher.subjects_taught }}'>
+            </div>
+
+            <button type="submit">Enviar</button>

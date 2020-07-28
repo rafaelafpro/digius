@@ -235,11 +235,13 @@ button, .info a {
 }
 
 .table-teachers th {
+    margin-top: 16px;
     text-align: left;
-    padding: 16px 0;
     text-transform: uppercase;
     color: var(--primary-color);
     font-size: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.384);
 }
 
 
@@ -288,8 +290,27 @@ button, .info a {
     background-color: var(--primary-color);
     padding: 8px 16px;
     border-radius: 8px;
-    position: relative;
+    /* position: relative; */
+    font-size: 14px;
     transition: 200ms ease-in-out;
+}
+
+.table-teachers #new-button {
+    display: inline-block;
+    margin-bottom: 24px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.table-teachers #new-button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.233);
+    margin-right: 8px;
+    border-radius: 8px 0 0 8px;
 }
 
 .table-teachers a:hover {

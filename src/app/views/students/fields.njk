@@ -1,0 +1,38 @@
+
+            <div class="item">
+                <div>URL do Avatar</div>
+                <input type="url" name="avatar_url" placeholder="https://" value="{{student.avatar_url}}">
+            </div>
+            <div class="item">
+                <div>Nome</div>
+                <input type="text" name="name" placeholder="Digite o seu nome completo" value="{{student.name}}">
+            </div>
+            <div class="item">
+                <div>Data de Nascimento</div>
+                <input type="date" name="birth" value="{{student.date}}">
+            </div>
+            <div class="item">
+                <div>E-mail</div>
+                <input type="email" name="email" value="{{student.email}}">
+            </div>
+            <div class="item">
+                <div>Ano escolar</div>
+                <select name="level">
+                    <option value="" selected disabled>Selecione o seu ano escolar</option>
+                    <option value="5f" {% if student.level == '5f' %} selected {% endif %}>5º ano do Ensino Fundamental</option>
+                    <option value="6f" {% if student.level == '6f' %} selected {% endif %}>6º ano do Ensino Fundamental</option>
+                    <option value="7f" {% if student.level == '7f' %} selected {% endif %}>7º ano do Ensino Fundamental</option>
+                    <option value="8f" {% if student.level == '8f' %} selected {% endif %}>8º ano do Ensino Fundamental</option>
+                    <option value="9f" {% if student.level == '9f' %} selected {% endif %}>9º ano do Ensino Fundamental</option>
+                    <option value="1a" {% if student.level == '1a' %} selected {% endif %}>1º ano do Ensino Médio</option>
+                    <option value="2a" {% if student.level == '2a' %} selected {% endif %}>2º ano do Ensino Médio</option>
+                    <option value="3a" {% if student.level == '3a' %} selected {% endif %}>3º ano do Ensino Médio</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <div>Carga Horária Semanal</div>
+                <input type="number" name="charge" placeholder="Quantidade de horas por semana" value='{{ student.charge }}'>
+            </div>
+
+            <button type="submit">Enviar</button>

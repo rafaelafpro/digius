@@ -34,7 +34,7 @@
 
 **Clone o projeto com comando:**
 
-```git clone https://github.com/LauraBeatris/foodfy.git```
+```git clone https://github.com/rafaelafpro/digius.git```
 
 **Instale as dependências:**
 

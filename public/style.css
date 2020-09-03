@@ -297,7 +297,6 @@ button, .info a {
 
 .table-teachers #new-button {
     display: inline-block;
-    margin-bottom: 24px;
     position: relative;
     padding-left: 40px;
 }
@@ -317,3 +316,43 @@ button, .info a {
     background-color: #4c60b8;
     transition: 200ms ease-in-out;
 }
+
+/* FILTER ================== */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.header form {
+    display: flex;
+}
+
+.header a{
+    width: 100px;
+}
+
+.header form button,
+.header form input {
+    margin: 0;
+    border-radius: 8px;
+}
+
+.header form button {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.header form input{
+    border: 1px solid rgba(128, 128, 128, 0.363);
+    margin-right: 10px;
+    padding: 4px 8px;
+    font-size: 16px;
+}
+
+.header form button:hover{
+    background-color: #4c60b8;
+    transition: 200ms ease;

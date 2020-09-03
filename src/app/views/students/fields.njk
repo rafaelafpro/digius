@@ -9,7 +9,7 @@
             </div>
             <div class="item">
                 <div>Data de Nascimento</div>
-                <input type="date" name="birth" value="{{student.date}}">
+                <input type="date" name="birth_date" value="{{student.birth_date}}">
             </div>
             <div class="item">
                 <div>E-mail</div>
@@ -33,6 +33,16 @@
             <div class="item">
                 <div>Carga Horária Semanal</div>
                 <input type="number" name="charge" placeholder="Quantidade de horas por semana" value='{{ student.charge }}'>
+            </div>
+
+            <div class="item">
+                <div>Professor Responsável</div>
+                <select name="teacher">
+                        <option value="" selected disabled> Selecione o professor responsável</option> 
+                    {% for teacher in teacherOptions %}
+                        <option value="{{teacher.id}}" {% if teacher.id == student.teacher_id %} selected {% endif %}> {{teacher.name}} </option>
+                    {% endfor %}    
+                </select>
             </div>
 
             <button type="submit">Enviar</button>
